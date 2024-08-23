@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://36a8di11x7is"]
+
+[ext_resource type="Script" path="res://principal.gd" id="1_63mmw"]
+[ext_resource type="Texture2D" uid="uid://scoywfnhou8r" path="res://icon.svg" id="2_gu047"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="2_ludyg"]
+
+[node name="Principal" type="Node2D"]
+script = ExtResource("1_63mmw")
+numero_magico = 6
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_ludyg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(544, 317)
+texture = ExtResource("2_gu047")
