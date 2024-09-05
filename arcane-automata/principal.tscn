@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://56t4aaa4krvu"]
+
+[ext_resource type="Script" path="res://principal.gd" id="1_0ndxp"]
+[ext_resource type="PackedScene" uid="uid://c1p3eqyfy0v24" path="res://Cenas/cena_1.tscn" id="2_ueh3p"]
+[ext_resource type="PackedScene" uid="uid://bg4h701ibw4ss" path="res://Cenas/cena_2.tscn" id="3_wt2eu"]
+[ext_resource type="Script" path="res://Cenas/cena_2.gd" id="4_xtgty"]
+
+[node name="Principal" type="Node2D"]
+script = ExtResource("1_0ndxp")
+
+[node name="Cena 1" parent="." instance=ExtResource("2_ueh3p")]
+
+[node name="Cena 2" parent="." instance=ExtResource("3_wt2eu")]
+script = ExtResource("4_xtgty")

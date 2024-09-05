@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4h701ibw4ss"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uywob"]
+bg_color = Color(0.721268, 0.131801, 0.955773, 1)
+
+[node name="Cena 2" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uywob")
+
+[node name="ir para 1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 282.0
+offset_right = 746.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 50
+text = "Ir para cena 1"

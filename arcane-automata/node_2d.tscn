@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=4 uid="uid://bt3blwvbsefyw"]
+
+[ext_resource type="Texture2D" uid="uid://dh2yg5cuo4c2w" path="res://Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0bjw2"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="2_x4wpn"]
+[ext_resource type="Texture2D" uid="uid://3d0syvng1dw0" path="res://icon.svg" id="2_xq45x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q8mvj"]
+texture = ExtResource("1_0bjw2")
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+11:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:3/0/physics_layer_0/polygon_0/one_way = true
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+11:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+11:5/0 = 0
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0/physics_layer_0/polygon_0/one_way = true
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/0/physics_layer_0/polygon_0/one_way = true
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0/physics_layer_0/polygon_0/one_way = true
+4:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pxn4e"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_q8mvj")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nhknm"]
+radius = 8.0
+height = 16.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAFACYAAAAJAAMAAAAGACYAAAAKAAMAAAAHACYAAAAKAAMAAAAIACYAAAAKAAMAAAAJACYAAAAKAAMAAAAKACYAAAAKAAMAAAALACYAAAAKAAMAAAAMACYAAAAKAAMAAAANACYAAAAKAAMAAAAOACYAAAAKAAMAAAAPACYAAAAKAAMAAAAQACYAAAAKAAMAAAARACYAAAAKAAMAAAASACYAAAAKAAMAAAATACYAAAAKAAMAAAAUACYAAAAKAAMAAAAVACYAAAANAAMAAAAPACIAAAAPAAMAAAATACAAAAAPAAMAAAAQAB4AAAAPAAMAAAATABwAAAAPAAMAAAAHACAAAAADAAEAAAAIACAAAAAEAAEAAAAJACAAAAAFAAEAAAAHACEAAAADAAYAAAAJACEAAAAFAAYAAAAIACEAAAAEAAYAAAA=")
+tile_set = SubResource("TileSet_pxn4e")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(106, 600)
+script = ExtResource("2_x4wpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-3.8147e-06, -3.8147e-06)
+scale = Vector2(0.132812, 0.132812)
+texture = ExtResource("2_xq45x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_nhknm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(216, 533)
+scale = Vector2(5, 5)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true

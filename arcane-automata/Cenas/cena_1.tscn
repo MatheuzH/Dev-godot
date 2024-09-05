@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1p3eqyfy0v24"]
+
+[ext_resource type="Script" path="res://Cenas/cena_1.gd" id="1_2g3ya"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbj5x"]
+bg_color = Color(0.422999, 0.000658429, 2.16588e-07, 1)
+
+[node name="Cena 1" type="Node2D"]
+script = ExtResource("1_2g3ya")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1154.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lbj5x")
+
+[node name="ir para 2" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 327.0
+offset_top = 195.0
+offset_right = 828.0
+offset_bottom = 466.0
+theme_override_font_sizes/font_size = 36
+text = "Ir para cena 2"
+
+[connection signal="pressed" from="Panel/ir para 2" to="." method="_on_ir_para_2_pressed"]
